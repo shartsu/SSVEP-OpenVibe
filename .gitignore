@@ -1,0 +1,8 @@
+ssvep-bci-0-acquisition-test.xml
+ssvep-bci-1-ssvep-configuration.xml
+ssvep-bci-2-training-acquisition.xml
+ssvep-bci-3-CSP-training.xml
+ssvep-bci-4-classifier-training.xml
+ssvep-bci-5-online-test-shooter.xml
+*.ov
+signals
