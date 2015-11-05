@@ -29,7 +29,7 @@
 			<Attributes>
 				<Attribute>
 					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
-					<Value>528</Value>
+					<Value>160.000000</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x1fa963f5, 0x1a638cd4)</Identifier>
@@ -37,7 +37,7 @@
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
-					<Value>352</Value>
+					<Value>336.000000</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
@@ -78,7 +78,7 @@
 					<TypeIdentifier>(0xb0d0db45, 0x49cbc34a)</TypeIdentifier>
 					<Name>Lua Script</Name>
 					<DefaultValue></DefaultValue>
-					<Value>${Player_ScenarioDirectory}/scripts/configuration-experiment-settings.lua</Value>
+					<Value>${Player_ScenarioDirectory}/scripts/[1] experiment-settings.lua</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 				<Setting>
@@ -131,7 +131,7 @@
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
-					<Value>272</Value>
+					<Value>64.000000</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x1fa963f5, 0x1a638cd4)</Identifier>
@@ -139,7 +139,7 @@
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
-					<Value>352</Value>
+					<Value>336.000000</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
@@ -152,10 +152,6 @@
 				<Attribute>
 					<Identifier>(0xad100179, 0xa3c984ab)</Identifier>
 					<Value>125</Value>
-				</Attribute>
-				<Attribute>
-					<Identifier>(0xc67a01dc, 0x28ce06c1)</Identifier>
-					<Value></Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0xc80ce8af, 0xf699f813)</Identifier>
@@ -190,7 +186,7 @@
 					<TypeIdentifier>(0xb0d0db45, 0x49cbc34a)</TypeIdentifier>
 					<Name>Lua Script</Name>
 					<DefaultValue></DefaultValue>
-					<Value>${Player_ScenarioDirectory}/scripts/configuration-peripheral-settings.lua</Value>
+					<Value>${Player_ScenarioDirectory}/scripts/[1] peripheral-settings.lua</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 				<Setting>
@@ -208,7 +204,7 @@
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
-					<Value>0</Value>
+					<Value>-80.000000</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x1fa963f5, 0x1a638cd4)</Identifier>
@@ -216,7 +212,7 @@
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
-					<Value>352</Value>
+					<Value>336.000000</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
@@ -263,19 +259,19 @@
 			<Attributes>
 				<Attribute>
 					<Identifier>(0x1b32c44c, 0x1905e0e9)</Identifier>
-					<Value>301</Value>
+					<Value>93</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x358ae8b5, 0x0f8bacd1)</Identifier>
-					<Value>352</Value>
+					<Value>336</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x3f0a3b27, 0x570913d2)</Identifier>
-					<Value>512</Value>
+					<Value>144</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x6267b5c5, 0x676e3e42)</Identifier>
-					<Value>352</Value>
+					<Value>336</Value>
 				</Attribute>
 			</Attributes>
 		</Link>
@@ -292,78 +288,25 @@
 			<Attributes>
 				<Attribute>
 					<Identifier>(0x1b32c44c, 0x1905e0e9)</Identifier>
-					<Value>29</Value>
+					<Value>-51</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x358ae8b5, 0x0f8bacd1)</Identifier>
-					<Value>352</Value>
+					<Value>336</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x3f0a3b27, 0x570913d2)</Identifier>
-					<Value>245</Value>
+					<Value>37</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x6267b5c5, 0x676e3e42)</Identifier>
-					<Value>352</Value>
+					<Value>336</Value>
 				</Attribute>
 			</Attributes>
 		</Link>
 	</Links>
 	<MessageLinks></MessageLinks>
 	<Comments>
-		<Comment>
-			<Identifier>(0x05488892, 0x66346878)</Identifier>
-			<Text>&lt;big&gt;&lt;b&gt;Peripheral Settings&lt;/b&gt;&lt;/big&gt;
-
-Settings in this box must match your hardware configuration.
-Currently, the only supported setting is the screen refresh rate.
-
-&lt;b&gt;Screen Refresh Rate : &lt;/b&gt; The refresh rate of your screen, 
-refer to your screen's user manual to find this value.
-
-&lt;span color=&quot;red&quot;&gt;Important notice&lt;/span&gt;
-
-Your screen will be able to reproduce only frequencies which
-are result of division of your screen refresh rate by an
-integer. </Text>
-			<Attributes>
-				<Attribute>
-					<Identifier>(0x473d9a43, 0x97fc0a97)</Identifier>
-					<Value>-32</Value>
-				</Attribute>
-				<Attribute>
-					<Identifier>(0x7234b86b, 0x2b8651a5)</Identifier>
-					<Value>-48</Value>
-				</Attribute>
-			</Attributes>
-		</Comment>
-		<Comment>
-			<Identifier>(0x3974ed1f, 0x29aa94c8)</Identifier>
-			<Text>&lt;big&gt;&lt;b&gt;Scenario description&lt;/b&gt;&lt;/big&gt;
-
-&lt;b&gt;&lt;span color=&quot;red&quot;&gt;This scenario must be run at least once before
-running any further SSVEP scenarios&lt;/span&gt;&lt;/b&gt;
-
-This is a scenario where you can configure your SSVEP experiment. There
-are two boxes containing configuration parameters:
-
-&lt;b&gt;Peripheral Settings&lt;/b&gt;
-
-&lt;b&gt;Experiment Settings&lt;/b&gt;
-
-For more detailed description please refer to the SSVEP
-documentation page.</Text>
-			<Attributes>
-				<Attribute>
-					<Identifier>(0x473d9a43, 0x97fc0a97)</Identifier>
-					<Value>352</Value>
-				</Attribute>
-				<Attribute>
-					<Identifier>(0x7234b86b, 0x2b8651a5)</Identifier>
-					<Value>-336</Value>
-				</Attribute>
-			</Attributes>
-		</Comment>
 		<Comment>
 			<Identifier>(0x5604a66d, 0x71c42d00)</Identifier>
 			<Text>	&lt;b&gt;&lt;span color=&quot;#2060ff&quot;&gt;Configurable box&lt;/span&gt;&lt;/b&gt;	
@@ -376,47 +319,11 @@ documentation page.</Text>
 			<Attributes>
 				<Attribute>
 					<Identifier>(0x473d9a43, 0x97fc0a97)</Identifier>
-					<Value>352</Value>
+					<Value>336.000000</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x7234b86b, 0x2b8651a5)</Identifier>
-					<Value>0</Value>
-				</Attribute>
-			</Attributes>
-		</Comment>
-		<Comment>
-			<Identifier>(0x60f812bd, 0x313894cf)</Identifier>
-			<Text>&lt;big&gt;&lt;b&gt;Experiment Settings&lt;/b&gt;&lt;/big&gt;
-
-Settings concerning the SSVEP experiment in general.
-
-&lt;b&gt;Target Light Color&lt;/b&gt; and &lt;b&gt;Target Dark Color&lt;/b&gt; represent
-the two colors which will be used to generate the flickering of
-the targets. The notation Light and Dark is arbitrary, however on
-frequencies using odd number of frames will use more frames to
-represent the Light color.
-
-&lt;b&gt;Stimulation Frequencies&lt;/b&gt; A comma separated list of
-frequencies used for the stimulation. Refer to the documentation
-for more details.
-
-&lt;b&gt;Processing Epoch Duration&lt;/b&gt; The length of the slice of the signal
-which will be used to find SSVEP response. With longer duration precision
-will increase at the detriment of the lag.
-
-&lt;b&gt;Processing Epoch Interval&lt;/b&gt; The speed interval between slices of the
-signal.
-
-&lt;b&gt;Processing Frequency Tolerance&lt;/b&gt; The width of the frequency band
-around the stimulation frequency used for classification.</Text>
-			<Attributes>
-				<Attribute>
-					<Identifier>(0x473d9a43, 0x97fc0a97)</Identifier>
-					<Value>-32</Value>
-				</Attribute>
-				<Attribute>
-					<Identifier>(0x7234b86b, 0x2b8651a5)</Identifier>
-					<Value>304</Value>
+					<Value>-80.000000</Value>
 				</Attribute>
 			</Attributes>
 		</Comment>
@@ -432,11 +339,11 @@ around the stimulation frequency used for classification.</Text>
 			<Attributes>
 				<Attribute>
 					<Identifier>(0x473d9a43, 0x97fc0a97)</Identifier>
-					<Value>352</Value>
+					<Value>336.000000</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x7234b86b, 0x2b8651a5)</Identifier>
-					<Value>272</Value>
+					<Value>64.000000</Value>
 				</Attribute>
 			</Attributes>
 		</Comment>
