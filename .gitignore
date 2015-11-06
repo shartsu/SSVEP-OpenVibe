@@ -5,4 +5,5 @@ ssvep-bci-3-CSP-training.xml
 ssvep-bci-4-classifier-training.xml
 ssvep-bci-5-online-test-shooter.xml
 *.ov
+*.csv
 signals
