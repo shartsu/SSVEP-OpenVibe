@@ -6,12 +6,6 @@ stimulation_duration = nil
 break_duration = nil
 flickering_delay = nil
 
-target_width = nil
-target_height = nil
-
-target_positions = {}
-number_of_targets = {}
-
 stimulationLabels = {
 	0x00008100,
 	0x00008101,
@@ -71,33 +65,8 @@ function initialize(box)
 		error()
 	end
 
-	-- get the target size
-	
-	s_targetSize = box:get_setting(6)
-
-	s_width, s_height = s_targetSize:match("^(%d+[.]?%d*);(%d+[.]?%d*)$")
-	target_width = tonumber(s_width)
-	target_height = tonumber(s_height)
-
-	if s_width ~= nil and s_height ~= nil then
-		box:log("Info", string.format("Target dimensions : width = %g, height = %g", target_width, target_height))
-	else
-		box:log("Error", "The parameter 'target size' must be in format float;float")
-		error()
-	end
-
-	-- get the targets' positions
-	
-	s_targetPositions = box:get_setting(7)
-	number_of_targets = 0
-
-	for s_target_x, s_target_y in s_targetPositions:gmatch("(-?%d+[.]?%d*);(-?%d+[.]?%d*)") do
-		box:log("Info", string.format("Target %d : x = %g y = %g", number_of_targets, tonumber(s_target_x), tonumber(s_target_y)))
-		table.insert(target_positions, {tonumber(s_target_x), tonumber(s_target_y)})
-		number_of_targets = number_of_targets + 1
-
-	end
-
+	-- tell the time when this program implemented
+	box:log("Info", string.format(os.date("%Y-%m-%d %H:%M:%S")))
 
 	-- create the configuration file for the stimulation-based-epoching
 	-- this file is used during classifier training only
@@ -105,34 +74,15 @@ function initialize(box)
 	cfg_file = io.open(cfg_file_name, "w")
 	if cfg_file == nil then
 		box:log("Error", "Cannot write to [" .. cfg_file_name .. "]")
-		box:log("Error", "Please copy the scenario folder to a directory with write access and use from there.")		
+		box:log("Error", "Please copy the scenario folder to a directory with write access and use from there.")
 		return false
 	end
-		
+
 	cfg_file:write("<OpenViBE-SettingsOverride>\n")
 	cfg_file:write("	<SettingValue>", stimulation_duration, "</SettingValue>\n")
 	cfg_file:write("	<SettingValue>", flickering_delay, "</SettingValue>\n")
 	cfg_file:write("	<SettingValue>OVTK_StimulationId_Target</SettingValue>\n")
 	cfg_file:write("</OpenViBE-SettingsOverride>\n")
-
-	cfg_file:close()
-
-	-- create the configuration file for the training program
-	cfg_file = io.open(box:get_config("${CustomConfigurationPrefix${OperatingSystem}}-ssvep-demo-training${CustomConfigurationSuffix${OperatingSystem}}"), "w")
-
-	cfg_file:write("# This file was automatically generated!\n\n")
-	cfg_file:write("# If you want to change the SSVEP trainer configuration\n")
-	cfg_file:write("# please use the box settings in the training scenario.\n\n")
-
-	cfg_file:write("SSVEP_TargetCount = ", number_of_targets, "\n")
-	cfg_file:write("SSVEP_TargetWidth = ", target_width, "\n")
-	cfg_file:write("SSVEP_TargetHeight = ", target_height, "\n")
-
-	for target_index, position in ipairs(target_positions) do
-
-		cfg_file:write("SSVEP_Target_X_", target_index - 1, " = ", position[1], "\n")
-		cfg_file:write("SSVEP_Target_Y_", target_index - 1, " = ", position[2], "\n")
-	end
 
 	cfg_file:close()
 
@@ -154,7 +104,7 @@ function process(box)
 	current_time = current_time + 2
 
 	for i,target in ipairs(sequence) do
-		box:log("Info", string.format("Goal no %d is %d at %d", i, target, current_time))
+		box:log("Info", string.format("Target no %d is %d at %d", i, target, current_time))
 		-- mark goal
 		box:send_stimulation(2, OVTK_StimulationId_LabelStart + target, current_time, 0)
 		-- wait for Flickering_delay seconds
