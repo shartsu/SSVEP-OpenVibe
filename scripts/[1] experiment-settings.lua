@@ -71,7 +71,7 @@ function process(box)
 	scenario_path = box:get_config("${Player_ScenarioDirectory}")
 		
 	for i=1,frequency_count do
-		cfg_file_name = scenario_path .. string.format("/configuration/temporal-filter-freq-%d.cfg", i)
+		cfg_file_name = scenario_path .. string.format("/[1] TemporalFilterFreq/temporal-filter-freq-%d.cfg", i)
 		box:log("Info", "Writing file '" .. cfg_file_name .. "'")
 
 		cfg_file = io.open(cfg_file_name, "w")
